@@ -1,9 +1,6 @@
 package br.com.dio.desafio.dominio;
 
-public class Curso {
-
-	private String titulo;
-	private String descricao;
+public class Curso extends Capacitacao {
 	private int cargaHoraria;
 
 	public Curso() {
@@ -38,6 +35,11 @@ public class Curso {
 
 	public void setCargaHoraria(int cargaHoraria) {
 		this.cargaHoraria = cargaHoraria;
+	}
+
+	@Override
+	public double calcularXp() {
+		return XP_PADRAO * cargaHoraria;
 	}
 
 	@Override
